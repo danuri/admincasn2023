@@ -92,6 +92,7 @@
                   <ul>
                     <li>SPTJM ditandatangani oleh pimpinan Satuan Kerja</li>
                     <li>Dengan mengunggah SPTJM maka pembagian alokasi tidak lagi dapat diubah</li>
+                    <li>Download <a href="<?= base_url()?>template/sptjm_alokasi_formasi.docx">Draft</a></li>
                   </ul>
                 </div>
                 <form class="" action="<?= site_url('pengaturan/formasi/final')?>" method="post" enctype="multipart/form-data">
