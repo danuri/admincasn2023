@@ -26,8 +26,9 @@
               <strong>Harap diperhatikan!</strong>
               <ul>
                 <li>Pembagian jumlah sesuai kebutuhan Organisasi</li>
-                <li>Proposi menggunakan ketentuan jumlah total maksimal jumlah Non ASN sebesar 80% dari total</li>
-                <li>Maksimal 80% adalah dari total formasi bukan per jabatan</li>
+                <li>Proposi menggunakan ketentuan jumlah total maksimal jumlah Non ASN sebesar 80% atau</li>
+                <li>Umum minimal 20%</li>
+                <li>Maksimal dan minimal peresentase adalah dari total formasi bukan per jabatan</li>
                 <li>Isi pada kolom Non ASN. Kolom Umum mengikuti secara sistem.</li>
                 <li>Final pengaturan jika telah selesai melakukan pembagian.</li>
               </ul>
