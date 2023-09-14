@@ -30,6 +30,7 @@
                 <li>Umum minimal 20%</li>
                 <li>Maksimal dan minimal peresentase adalah dari total formasi bukan per jabatan</li>
                 <li>Isi pada kolom Non ASN. Kolom Umum mengikuti secara sistem.</li>
+                <li>Untuk jabatan Dosen CPNS wajib UMUM.</li>
                 <li>Final pengaturan jika telah selesai melakukan pembagian.</li>
               </ul>
             </div>
