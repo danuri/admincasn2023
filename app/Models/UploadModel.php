@@ -14,7 +14,7 @@ class UploadModel extends Model
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_dokumen','id_satker','lampiran'];
+    protected $allowedFields    = ['id_dokumen','kode_lokasi','attachment','created_by'];
 
     // Dates
     protected $useTimestamps = true;

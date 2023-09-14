@@ -24,4 +24,5 @@ $routes->group("upload", ["filter" => "auth"], function ($routes) {
 $routes->group("pengaturan", ["filter" => "auth"], function ($routes) {
     $routes->get('formasi', 'Pengaturan\Formasi::index');
     $routes->post('formasi/saveporsi', 'Pengaturan\Formasi::saveporsi');
+    $routes->post('formasi/final', 'Pengaturan\Formasi::final');
 });

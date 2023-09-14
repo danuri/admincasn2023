@@ -22,17 +22,6 @@
 
         <div class="row">
           <div class="col-xl-12">
-            <div class="alert alert-warning" role="alert">
-              <strong>Harap diperhatikan!</strong>
-              <ul>
-                <li>Pembagian jumlah sesuai kebutuhan Organisasi</li>
-                <li>Proposi menggunakan ketentuan jumlah total maksimal jumlah Non ASN sebesar 80% atau</li>
-                <li>Umum minimal 20%</li>
-                <li>Maksimal dan minimal peresentase adalah dari total formasi bukan per jabatan</li>
-                <li>Isi pada kolom Non ASN. Kolom Umum mengikuti secara sistem.</li>
-                <li>Final pengaturan jika telah selesai melakukan pembagian.</li>
-              </ul>
-            </div>
             <div class="card">
               <div class="card-header align-items-center d-flex">
                 <h4 class="card-title mb-0 flex-grow-1">Pengaturan Pembagian Jumlah Non ASN dan Umum</h4>
@@ -41,16 +30,15 @@
 
               <div class="card-body">
                 <div class="table-responsive table-card">
-                  <table class="table align-middle table-nowrap table-striped-columns mb-0">
+                  <table class="table align-middle table-nowrap table-striped-columns mb-0 datatable">
                     <thead>
                       <tr>
                         <th>JABATAN</th>
                         <th>JENIS</th>
                         <th>KELOMPOK</th>
-                        <th>JUMLAH (<span id="rtotal">0</span>)</th>
-                        <th>KHUSUS (<span id="rnonasn">0</span>)</th>
-                        <th>UMUM (<span id="rumum">0</span>)</th>
-                        <th>SIMPAN</th>
+                        <th>JUMLAH</th>
+                        <th>KHUSUS</th>
+                        <th>UMUM</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -62,16 +50,9 @@
                             <td><?= $row->jabatan?></td>
                             <td><?= strtoupper($row->jenis)?></td>
                             <td><?= $row->kelompok?></td>
-                            <td><input type="number" class="form-control form-control-sm" id="total<?= $no?>" value="<?= $row->jumlah?>" readonly></td>
-                            <td>
-                              <input type="number" class="form-control form-control-sm jnonasn" id="jnonasn<?= $no?>" name="" value="<?= $row->nonasn?>" onchange="calculate(<?= $no?>)">
-                            </td>
-                            <td>
-                              <input type="number" class="form-control form-control-sm jumum" id="jumum<?= $no?>" name="" value="<?= $row->umum?>" readonly>
-                            </td>
-                            <td>
-                              <input type="button" class="btn btn-sm btn-primary" name="submit" onclick="sendporsi(<?= $no?>,<?= $row->id?>)" value="Simpan">
-                            </td>
+                            <td><?= $row->jumlah?></td>
+                            <td><?= $row->nonasn?></td>
+                            <td><?= $row->umum?></td>
                           </tr>
                         </form>
                       <?php $no++; } ?>
@@ -87,25 +68,7 @@
                 <h4 class="card-title mb-0 flex-grow-1">Final Pengaturan</h4>
               </div>
               <div class="card-body">
-                <div class="alert alert-warning" role="alert">
-                  <ul>
-                    <li>SPTJM ditandatangani oleh pimpinan Satuan Kerja</li>
-                    <li>Dengan mengunggah SPTJM maka pembagian alokasi tidak lagi dapat diubah</li>
-                  </ul>
-                </div>
-                <form class="" action="<?= site_url('pengaturan/formasi/final')?>" method="post" enctype="multipart/form-data">
-                  <div class="row mb-3">
-                      <div class="col-lg-3">
-                          <label for="nameInput" class="form-label">SPTJM</label>
-                      </div>
-                      <div class="col-lg-9">
-                          <input type="file" class="form-control" id="lampiran" name="lampiran">
-                      </div>
-                  </div>
-                  <div class="text-end">
-                      <button type="submit" class="btn btn-primary">Simpan</button>
-                  </div>
-                </form>
+                Final pengaturan formasi sudah dilakukan
               </div>
             </div>
           </div>
