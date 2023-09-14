@@ -61,15 +61,15 @@
                             <td><?= $row->jabatan?></td>
                             <td><?= strtoupper($row->jenis)?></td>
                             <td><?= $row->kelompok?></td>
-                            <td><input type="number" class="form-control form-control-sm" id="total<?= $row->id?>" value="<?= $row->jumlah?>" readonly></td>
+                            <td><input type="number" class="form-control form-control-sm" id="total<?= $no?>" value="<?= $row->jumlah?>" readonly></td>
                             <td>
-                              <input type="number" class="form-control form-control-sm jnonasn" id="jnonasn<?= $row->id?>" name="" value="<?= $row->nonasn?>" onchange="calculate(<?= $row->id?>)">
+                              <input type="number" class="form-control form-control-sm jnonasn" id="jnonasn<?= $no?>" name="" value="<?= $row->nonasn?>" onchange="calculate(<?= $no?>)">
                             </td>
                             <td>
-                              <input type="number" class="form-control form-control-sm jumum" id="jumum<?= $row->id?>" name="" value="<?= $row->umum?>" readonly>
+                              <input type="number" class="form-control form-control-sm jumum" id="jumum<?= $no?>" name="" value="<?= $row->umum?>" readonly>
                             </td>
                             <td>
-                              <input type="button" class="btn btn-sm btn-primary" name="submit" onclick="sendporsi(<?= $row->id?>)" value="Simpan">
+                              <input type="button" class="btn btn-sm btn-primary" name="submit" onclick="sendporsi(<?= $no?>,<?= $row->id?>)" value="Simpan">
                             </td>
                           </tr>
                         </form>
@@ -155,10 +155,10 @@
     $('#rumum').html(x);
   }
 
-  function sendporsi(id) {
+  function sendporsi(no,id) {
     axios.post('<?= site_url('pengaturan/formasi/saveporsi')?>', {
       ids: id,
-      nonasn: $('#jnonasn'+id).val()
+      nonasn: $('#jnonasn'+no).val()
     })
     .then(function (response) {
       console.log(response);
