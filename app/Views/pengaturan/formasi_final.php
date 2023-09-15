@@ -23,13 +23,8 @@
         <div class="row">
           <div class="col-xl-12">
             <div class="card">
-              <div class="card-header align-items-center d-flex">
-                <h4 class="card-title mb-0 flex-grow-1">Pengaturan Pembagian Jumlah Non ASN dan Umum</h4>
-              </div>
-
-
               <div class="card-body">
-                <div class="table-responsive table-card">
+                <div class="table-responsive">
                   <table class="table align-middle table-nowrap table-striped-columns mb-0 datatable">
                     <thead>
                       <tr>

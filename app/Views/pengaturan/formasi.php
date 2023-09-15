@@ -48,6 +48,7 @@
                         <th>JABATAN</th>
                         <th>JENIS</th>
                         <th>KELOMPOK</th>
+                        <th>KUALDIK</th>
                         <th>JUMLAH (<span id="rtotal">0</span>)</th>
                         <th>KHUSUS (<span id="rnonasn">0</span>)</th>
                         <th>UMUM (<span id="rumum">0</span>)</th>
@@ -63,6 +64,7 @@
                             <td><?= $row->jabatan?></td>
                             <td><?= strtoupper($row->jenis)?></td>
                             <td><?= $row->kelompok?></td>
+                            <td><?= $row->kualifikasi_pendidikan?></td>
                             <td><input type="number" class="form-control form-control-sm" id="total<?= $no?>" value="<?= $row->jumlah?>" readonly></td>
                             <td>
                               <input type="number" class="form-control form-control-sm jnonasn" id="jnonasn<?= $no?>" name="" value="<?= $row->nonasn?>" onchange="calculate(<?= $no?>)">

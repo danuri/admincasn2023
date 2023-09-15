@@ -6,18 +6,19 @@
     <meta charset="utf-8" />
     <title>Admin CASN 2023 - Kementerian Agama RI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
+    <meta content="Admin CASN Kementerian Agama RI TA 2023" name="description" />
+    <meta content="Danunih" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="<?= base_url()?>assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 
     <!-- Layout config Js -->
     <script src="<?= base_url()?>assets/js/layout.js"></script>
     <!-- Bootstrap Css -->
     <link href="<?= base_url()?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
     <!-- Icons Css -->
     <link href="<?= base_url()?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -295,13 +296,11 @@
     <script src="<?= base_url()?>assets/js/plugins.js"></script>
 
     <!-- App js -->
-    <script src="<?= base_url()?>assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
@@ -309,6 +308,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 
+    <script src="<?= base_url()?>assets/js/app.js"></script>
     <script type="text/javascript">
         $('.datatable').DataTable({
                       dom:"Bfrtip",

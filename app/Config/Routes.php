@@ -26,3 +26,11 @@ $routes->group("pengaturan", ["filter" => "auth"], function ($routes) {
     $routes->post('formasi/saveporsi', 'Pengaturan\Formasi::saveporsi');
     $routes->post('formasi/final', 'Pengaturan\Formasi::final');
 });
+
+$routes->group("admin", ["filter" => "admin"], function ($routes) {
+
+  $routes->group("users", function ($routes) {
+      $routes->get('', 'Admin\Users::index');
+  });
+
+});
