@@ -42,7 +42,7 @@
 
               <div class="card-body">
                 <div class="table-responsive table-card">
-                  <table class="table align-middle table-nowrap table-striped-columns mb-0">
+                  <table class="table align-middle table-striped-columns mb-0">
                     <thead>
                       <tr>
                         <th>JABATAN</th>
