@@ -213,11 +213,13 @@
                             </a>
                         </li>
 
-                        <!-- <li class="menu-title"><span data-key="t-menu">Admin</span></li>
+                        <?php if(session('is_admin') == 1){?>
+
+                        <li class="menu-title"><span data-key="t-menu">Admin</span></li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="<?= site_url('admin/satker')?>">
-                                <i class="ri-todo-line"></i> <span data-key="t-widgets">Satuan Kerja</span>
+                            <a class="nav-link menu-link" href="<?= site_url('admin/users')?>">
+                                <i class="ri-todo-line"></i> <span data-key="t-widgets">Users</span>
                             </a>
                         </li>
 
@@ -228,10 +230,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="<?= site_url('admin/upload')?>">
+                            <a class="nav-link menu-link" href="<?= site_url('admin/dokumen')?>">
                                 <i class="ri-folder-upload-line"></i> <span data-key="t-widgets">Upload Dokumen</span>
                             </a>
-                        </li> -->
+                        </li>
+                        <?php }?>
                     </ul>
                 </div>
                 <!-- Sidebar -->

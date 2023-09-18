@@ -12,6 +12,7 @@ $routes->get('auth/callback', 'Auth::callback');
 
 $routes->get('/', 'Home::index',['filter' => 'auth']);
 $routes->get('formasi', 'Formasi::index',['filter' => 'auth']);
+$routes->get('regulasi', 'Regulasi::index',['filter' => 'auth']);
 
 $routes->group("download", ["filter" => "auth"], function ($routes) {
     $routes->get('', 'Download::index');
@@ -31,6 +32,14 @@ $routes->group("admin", ["filter" => "admin"], function ($routes) {
 
   $routes->group("users", function ($routes) {
       $routes->get('', 'Admin\Users::index');
+  });
+
+  $routes->group("dokumen", function ($routes) {
+      $routes->get('', 'Admin\Dokumen::index');
+  });
+
+  $routes->group("download", function ($routes) {
+      $routes->get('', 'Admin\Download::index');
   });
 
 });
