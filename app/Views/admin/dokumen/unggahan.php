@@ -7,9 +7,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Dokumen Unggahan</h4>
+                    <h4 class="mb-sm-0">Unggahan Dokumen ""<?= $dokumen->dokumen?>""</h4>
                     <div class="page-title-right">
-                        <a href="javascript: void(0);" class="btn btn-primary">Tambah Dokumen</a>
                     </div>
                 </div>
             </div>
@@ -23,19 +22,24 @@
                   <table id="buttons-datatables" class="display table table-bordered datatable" style="width:100%">
                     <thead>
                       <tr>
-                        <th>DOKUMEN</th>
-                        <th>KETERANGAN</th>
-                        <th>DIBUAT TANGGAL</th>
+                        <th>KODE LOKASI</th>
+                        <th>LOKASI</th>
+                        <th>LAMPIRAN</th>
                         <th>OPSI</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php foreach ($dokumen as $row) {?>
+                      <?php foreach ($unggahan as $row) {?>
                       <tr>
-                        <td><?= $row->dokumen?></td>
-                        <td><?= $row->keterangan?></td>
-                        <td><?= $row->created_at?></td>
-                        <td><a href="<?= site_url('admin/dokumen/unggahan/'.$row->id)?>" class="btn btn-sm btn-primary">Unggahan</a> <a href="" class="btn btn-sm btn-success">Edit</a> <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Dokumen akan dihapus?')">Delete</a></td>
+                        <td><?= $row->kode_bkn?></td>
+                        <td><?= $row->nama?></td>
+                        <?php if($row->attachment){ ?>
+                        <td><a href="https://docu.kemenag.go.id:9000/sscasn/2023/<?= $row->attachment;?>" target="_blank" class="btn btn-sm btn-primary">Lihat</a></td>
+                        <td><a href="<?= site_url('admin/dokumen/deleteunggahan/'.$row->idattachment)?>" class="btn btn-sm btn-danger" onclick="return confirm('Dokumen akan dihapus?')">Delete</a></td>
+                      <?php }else{ ?>
+                        <td>Belum Mengunggah</td>
+                        <td></td>
+                      <?php } ?>
                       </tr>
                       <?php } ?>
                     </tbody>

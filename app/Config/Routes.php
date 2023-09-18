@@ -36,6 +36,8 @@ $routes->group("admin", ["filter" => "admin"], function ($routes) {
 
   $routes->group("dokumen", function ($routes) {
       $routes->get('', 'Admin\Dokumen::index');
+      $routes->get('unggahan/(:num)', 'Admin\Dokumen::unggahan/$1');
+      $routes->get('deleteunggahan/(:num)', 'Admin\Dokumen::deleteunggahan/$1');
   });
 
   $routes->group("download", function ($routes) {

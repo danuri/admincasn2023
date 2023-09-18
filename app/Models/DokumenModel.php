@@ -38,4 +38,31 @@ class DokumenModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    protected $db;
+
+    public function __construct()
+    {
+      parent::__construct();
+
+      $this->db = \Config\Database::connect('default', false);
+    }
+
+    public function unggahan($id)
+    {
+      $query = $this->db->query("SELECT
+                                	lokasi_formasi.kode_bkn,
+                                	lokasi_formasi.nama,
+                                	tr_dokumen.attachment,
+                                	tr_dokumen.id AS idattachment
+                                FROM
+                                	lokasi_formasi
+                                	LEFT JOIN
+                                	tr_dokumen
+                                	ON
+                                		lokasi_formasi.kode_bkn = tr_dokumen.kode_lokasi AND tr_dokumen.id_dokumen = '$id'");
+      $result = $query->getResult();
+
+      return $result;
+    }
 }
