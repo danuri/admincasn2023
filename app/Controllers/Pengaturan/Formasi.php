@@ -52,7 +52,7 @@ class Formasi extends BaseController
         ];
 
 
-        $insert = $model->update($id,$data);
+        // $insert = $model->update($id,$data);
 
         return $this->response->setJSON(['message'=>'Alokasi telah diupdate']);
     }
