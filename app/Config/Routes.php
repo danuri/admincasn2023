@@ -14,7 +14,7 @@ $routes->get('/', 'Home::index',['filter' => 'auth']);
 $routes->get('formasi', 'Formasi::index',['filter' => 'auth']);
 $routes->get('regulasi', 'Regulasi::index',['filter' => 'auth']);
 
-$routes->group("download", ["filter" => "auth"], function ($routes) {
+$routes->group("downloads", ["filter" => "auth"], function ($routes) {
     $routes->get('', 'Download::index');
 });
 

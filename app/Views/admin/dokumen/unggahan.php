@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Unggahan Dokumen ""<?= $dokumen->dokumen?>""</h4>
+                    <h4 class="mb-sm-0">Unggahan Dokumen "<?= $dokumen->dokumen?>"</h4>
                     <div class="page-title-right">
                     </div>
                 </div>
@@ -25,6 +25,7 @@
                         <th>KODE LOKASI</th>
                         <th>LOKASI</th>
                         <th>LAMPIRAN</th>
+                        <th>UPLOAD DATE</th>
                         <th>OPSI</th>
                       </tr>
                     </thead>
@@ -35,9 +36,11 @@
                         <td><?= $row->nama?></td>
                         <?php if($row->attachment){ ?>
                         <td><a href="https://docu.kemenag.go.id:9000/sscasn/2023/<?= $row->attachment;?>" target="_blank" class="btn btn-sm btn-primary">Lihat</a></td>
+                        <td><?= $row->created_at?></td>
                         <td><a href="<?= site_url('admin/dokumen/deleteunggahan/'.$row->idattachment)?>" class="btn btn-sm btn-danger" onclick="return confirm('Dokumen akan dihapus?')">Delete</a></td>
                       <?php }else{ ?>
-                        <td>Belum Mengunggah</td>
+                        <td>Belum</td>
+                        <td></td>
                         <td></td>
                       <?php } ?>
                       </tr>

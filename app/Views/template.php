@@ -196,7 +196,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="<?= site_url('download')?>">
+                            <a class="nav-link menu-link" href="<?= site_url('downloads')?>">
                                 <i class="ri-file-download-line"></i> <span data-key="t-widgets">Download Data</span>
                             </a>
                         </li>
@@ -224,7 +224,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="<?= site_url('admin/download')?>">
+                            <a class="nav-link menu-link" href="<?= site_url('admin/downloads')?>">
                                 <i class="ri-file-download-line"></i> <span data-key="t-widgets">Download Data</span>
                             </a>
                         </li>

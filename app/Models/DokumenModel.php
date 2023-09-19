@@ -54,7 +54,8 @@ class DokumenModel extends Model
                                 	lokasi_formasi.kode_bkn,
                                 	lokasi_formasi.nama,
                                 	tr_dokumen.attachment,
-                                	tr_dokumen.id AS idattachment
+                                	tr_dokumen.id AS idattachment,
+                                	tr_dokumen.created_at
                                 FROM
                                 	lokasi_formasi
                                 	LEFT JOIN
