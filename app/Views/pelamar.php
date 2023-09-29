@@ -8,6 +8,11 @@
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                     <h4 class="mb-sm-0">Statistik Pelamar</h4>
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item">Update : <?= get_option('update_pelamar')?></li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>

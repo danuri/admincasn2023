@@ -38,13 +38,15 @@ if ( ! function_exists('get_option'))
 {
 	function get_option($name)
 	{
-		$CI =& get_instance();
+		$db = \Config\Database::connect();
 
-		$CI->db->where('name',$name);
-        $query	= $CI->db->get('tb_options');
-        $result = $query->row();
+    $builder = $db->table('options');
+    $builder->select('*');
+    $builder->where('option_name',$name);
+    $result = $builder->get();
+    $result = $result->getRow();
 
-		return $result->value;
+		return $result->option_value;
 	}
 }
 
@@ -53,7 +55,7 @@ if ( ! function_exists('update_option'))
 	function update_option($name,$value)
 	{
 		$CI =& get_instance();
-    $CI->cms_model->update('options',array('value' => $value), array('key' => $name));
+    $CI->cms_model->update('options',array('option_value' => $value), array('option_name' => $name));
 
 		return true;
 	}
