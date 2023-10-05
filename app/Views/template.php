@@ -234,6 +234,25 @@
                                 <i class="ri-folder-upload-line"></i> <span data-key="t-widgets">Upload Dokumen</span>
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link collapsed" href="#sidebarLanding" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLanding">
+                                <i class="ri-rocket-line"></i> <span data-key="t-landing">Pelamar</span>
+                            </a>
+                            <div class="menu-dropdown collapse" id="sidebarLanding" style="">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="<?= site_url('admin/pelamar/cpns')?>" class="nav-link" data-key="t-one-page">CPNS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= site_url('admin/pelamar/teknis')?>" class="nav-link" data-key="t-nft-landing">PPPK Teknis</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= site_url('admin/pelamar/nakes')?>" class="nav-link" data-key="t-job">PPPK Nakes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <?php }?>
                     </ul>
                 </div>

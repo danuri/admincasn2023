@@ -36,6 +36,15 @@ class CrudModel extends Model
         return $query->getResult();
       }
 
+      public function getCount($table,$field,$where)
+      {
+        $builder = $this->db->table($table);
+        $builder->selectSum($field);
+        $query = $builder->getWhere($where);
+
+        return $query->getRow();
+      }
+
       public function updateValidasi($nik,$data)
       {
         $builder = $this->db->table('nonasn');

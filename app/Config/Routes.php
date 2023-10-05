@@ -46,4 +46,6 @@ $routes->group("admin", ["filter" => "admin"], function ($routes) {
       $routes->get('', 'Admin\Download::index');
   });
 
+  $routes->get('pelamar/(:any)', 'Admin\Pelamar::index/$1');
+
 });
