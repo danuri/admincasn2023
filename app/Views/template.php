@@ -89,7 +89,7 @@
                             <img class="rounded-circle header-profile-user" src="<?= base_url()?>assets/images/users/avatar-1.jpg" alt="Header Avatar">
                             <span class="text-start ms-xl-2">
                                 <span class="d-none d-xl-inline-block ms-1 fw-semibold user-name-text"><?= session('nama')?></span>
-                                <span class="d-none d-xl-block ms-1 fs-13 text-muted user-name-sub-text"><?= session('satker4')?></span>
+                                <span class="d-none d-xl-block ms-1 fs-13 text-muted user-name-sub-text"><?= session('satker4')?> (<?= session('lokasi')?>)</span>
                             </span>
                         </span>
                     </button>

@@ -18,6 +18,7 @@ $routes->get('formasi', 'Formasi::index',['filter' => 'auth']);
 
 $routes->group("downloads", ["filter" => "auth"], function ($routes) {
     $routes->get('', 'Download::index');
+    $routes->get('pelamar', 'Download::pelamar');
 });
 
 $routes->group("upload", ["filter" => "auth"], function ($routes) {

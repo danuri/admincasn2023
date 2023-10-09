@@ -27,9 +27,9 @@
                     </thead>
                     <tbody>
                       <tr>
+                        <td>Data Pelamar</td>
                         <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><a href="<?= site_url('downloads/pelamar')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
                     </tbody>
                   </table>
