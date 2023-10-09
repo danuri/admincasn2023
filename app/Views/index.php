@@ -33,6 +33,7 @@
                   <li>Data Pelamar bisa diunduh melalui menu <a href="https://ropeg.kemenag.go.id/admincasn/downloads">Download Data</a></li>
                   <li>Proses Verifikasi Seleksi Administrasi s.d Tanggal 12 Oktober 2023 Pukul 23:59 WIB</li>
                 </ul>
+                <p>Note:<br>Bagi yang tidak bisa login, silahkan menghubungi Aa Wasis</p>
               </div>
             </div>
           </div>
