@@ -31,6 +31,16 @@
                         <td>2023-10-09 10:25:00 WIB</td>
                         <td><a href="<?= site_url('downloads/pelamar')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
+                      <tr>
+                        <td>Juklak CPNS Kemenag 2023 (Draft)</td>
+                        <td>Password: casnkemenag2023</td>
+                        <td><a href="<?= base_url('download/RKSJ JUKLAK CPNS KEMENAG 2023 Draft.pdf')?>" class="btn btn-sm btn-primary">Download</a></td>
+                      </tr>
+                      <tr>
+                        <td>Juklak PPPK Kemenag 2023 (Draft)</td>
+                        <td>Password: casnkemenag2023</td>
+                        <td><a href="<?= base_url('download/RKSJ JUKLAK PPPK 2023 Draft.pdf')?>" class="btn btn-sm btn-primary">Download</a></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
