@@ -19,6 +19,53 @@
 
         <div class="row">
           <div class="col-xl-12">
+            <div class="card crm-widget">
+                <div class="card-body p-0">
+                    <div class="row row-cols-xxl-4 row-cols-md-3 row-cols-1 g-0">
+                        <div class="col">
+                            <div class="py-4 px-3">
+                                <h5 class="text-muted text-uppercase fs-13">Jumlah Pendaftar</h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 ms-3">
+                                        <h2 class="mb-0"><span class="counter-value" data-target="<?= $jpendaftar->pendaftar?>">0</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col">
+                            <div class="mt-3 mt-md-0 py-4 px-3">
+                                <h5 class="text-muted text-uppercase fs-13">Jumlah Submit</h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 ms-3">
+                                        <h2 class="mb-0"><span class="counter-value" data-target="<?= $jsubmit->submit?>">0</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col">
+                            <div class="mt-3 mt-md-0 py-4 px-3">
+                                <h5 class="text-muted text-uppercase fs-13">Memenuhi Syarat</h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 ms-3">
+                                        <h2 class="mb-0"><span class="counter-value" data-target="<?= $jms->ms?>">0</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col">
+                            <div class="mt-3 mt-lg-0 py-4 px-3">
+                                <h5 class="text-muted text-uppercase fs-13">Tidak Memenuhi Syarat</h5>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1 ms-3">
+                                        <h2 class="mb-0"><span class="counter-value" data-target="<?= $jtms->tms?>">0</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="card">
               <div class="card-body">
                 <div class="table-responsive">

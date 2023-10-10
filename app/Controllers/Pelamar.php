@@ -11,6 +11,10 @@ class Pelamar extends BaseController
     {
         $model  = new CrudModel();
         $data['stat']   = $model->getResult('statistik_pelamar',['ins_nm'=>session('lokasi_nama')]);
+        $data['jpendaftar'] = $model->getCount('statistik_pelamar','pendaftar',['ins_nm'=>session('lokasi_nama')]);
+        $data['jsubmit'] = $model->getCount('statistik_pelamar','submit',['ins_nm'=>session('lokasi_nama')]);
+        $data['jms'] = $model->getCount('statistik_pelamar','ms',['ins_nm'=>session('lokasi_nama')]);
+        $data['jtms'] = $model->getCount('statistik_pelamar','tms',['ins_nm'=>session('lokasi_nama')]);
         return view('pelamar',$data);
     }
 }
