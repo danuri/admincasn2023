@@ -28,7 +28,7 @@
                     <tbody>
                       <tr>
                         <td>Data Pelamar</td>
-                        <td>2023-10-09 10:25:00 WIB</td>
+                        <td><?= get_option('data_pelamar')?></td>
                         <td><a href="<?= site_url('downloads/pelamar')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
                     </tbody>
