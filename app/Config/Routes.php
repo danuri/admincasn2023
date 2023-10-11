@@ -31,6 +31,13 @@ $routes->group("pengaturan", ["filter" => "auth"], function ($routes) {
     $routes->post('formasi/final', 'Pengaturan\Formasi::final');
 });
 
+$routes->group("verifikasi", ["filter" => "auth"], function ($routes) {
+    $routes->get('thk2', 'Verifikasi::thk2');
+    $routes->post('thk2', 'Verifikasi::searchthk2');
+    $routes->get('nonasn', 'Verifikasi::nonasn');
+    $routes->post('nonasn', 'Verifikasi::searchnonasn');
+});
+
 $routes->group("admin", ["filter" => "admin"], function ($routes) {
 
   $routes->group("users", function ($routes) {

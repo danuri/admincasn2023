@@ -206,6 +206,19 @@
                                 <i class="ri-folder-upload-line"></i> <span data-key="t-widgets">Upload Dokumen</span>
                             </a>
                         </li>
+
+                        <li class="menu-title"><span data-key="t-menu">Validasi Data</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="<?= site_url('verifikasi/nonasn')?>">
+                                <i class="ri-checkbox-fill"></i> <span data-key="t-widgets">Data Non ASN</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="<?= site_url('verifikasi/thk2')?>">
+                                <i class="ri-checkbox-fill"></i> <span data-key="t-widgets">Data THK2</span>
+                            </a>
+                        </li>
+
                         <li class="menu-title"><span data-key="t-menu">Pengaturan</span></li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="<?= site_url('pengaturan/formasi')?>">
