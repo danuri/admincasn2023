@@ -70,7 +70,7 @@ class CrudModel extends Model
                                   	INNER JOIN
                                   	satker_copy1 s
                                   	ON
-                                  		nonasn.ID_PARENT = s.id
+                                  		nonasn.KODE_SATKER = s.kodesatker
                                   WHERE
                                   	nonasn.NIK = '$nik'")->getRow();
         return $query;
