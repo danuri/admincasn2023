@@ -147,7 +147,8 @@ class Download extends BaseController
 
       $writer = new Xlsx($spreadsheet);
       header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-      header('Content-Disposition: attachment; filename="data_pelamar.xlsx"');
+      header('Content-Disposition: attachment; filename="Data_Pelamar.xlsx"');
       $writer->save('php://output');
+      exit();
     }
 }
