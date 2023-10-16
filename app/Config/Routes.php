@@ -23,6 +23,7 @@ $routes->group("downloads", ["filter" => "auth"], function ($routes) {
 
 $routes->group("upload", ["filter" => "auth"], function ($routes) {
     $routes->get('', 'Upload::index');
+    $routes->post('save', 'Upload::save');
 });
 
 $routes->group("pengaturan", ["filter" => "auth"], function ($routes) {

@@ -348,10 +348,10 @@ class CrudModel extends Model
 
       public function dokumen()
       {
-        $kode = session('idsatker');
+        $kode = session('lokasi');
         $query = $this->db->query("SELECT a.*,
-                                  (SELECT lampiran FROM tr_dokumen WHERE id_dokumen=a.id AND id_satker='$kode') lampiran
-                                  FROM tm_dokumen a")->getResult();
+                                  (SELECT attachment FROM tr_dokumen WHERE id_dokumen=a.id AND kode_lokasi='$kode') lampiran
+                                  FROM tm_dokumen a WHERE a.status='1'")->getResult();
         return $query;
       }
 }
