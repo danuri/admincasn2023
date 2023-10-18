@@ -35,7 +35,7 @@
                         <td><?= $row->kode_bkn?></td>
                         <td><?= $row->nama?></td>
                         <?php if($row->attachment){ ?>
-                        <td><a href="https://docu.kemenag.go.id:9000/sscasn/2023/<?= $row->attachment;?>" target="_blank" class="btn btn-sm btn-primary">Lihat</a></td>
+                        <td><a href="https://docu.kemenag.go.id:9000/sscasn/2023/surat/<?= $row->attachment;?>" target="_blank" class="btn btn-sm btn-primary">Lihat</a></td>
                         <td><?= $row->created_at?></td>
                         <td><a href="<?= site_url('admin/dokumen/deleteunggahan/'.$row->idattachment)?>" class="btn btn-sm btn-danger" onclick="return confirm('Dokumen akan dihapus?')">Delete</a></td>
                       <?php }else{ ?>
