@@ -63,9 +63,9 @@ class Api extends BaseController
       if($newpage > $body->totalPages){
         echo 'executing '.$body->totalElements;
         echo '<br>';
-        echo 'Done and waiting to reload...';
+        echo 'Browser automatically reload in 5 minutes';
         echo "<script type='text/javascript'>
-                setInterval('window.location.reload()', 600000);
+                setInterval('window.location.reload()', 300000);
             </script>";
         // sleep(600);
         // return redirect()->to('api/sanggah/'.$jenis.'/'.$type.'/'.$page);
