@@ -58,15 +58,13 @@ class Api extends BaseController
 
       // sleep(5);
 
-      if($i == $count){
-        $newpage = $page+1;
+      $newpage = $page+1;
 
-        if($newpage > $body->totalPages){
-          echo 'Done';
-          return false;
-        }else{
-          return redirect()->to('api/sanggah/'.$jenis.'/'.$type.'/'.$newpage);
-        }
+      if($newpage > $body->totalPages){
+        echo 'Done';
+        return false;
+      }else{
+        return redirect()->to('api/sanggah/'.$jenis.'/'.$type.'/'.$newpage);
       }
     }
 }
