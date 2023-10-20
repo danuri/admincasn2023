@@ -51,7 +51,7 @@ class Api extends BaseController
         $nik = $body->content[$i]->pendaftarId->nik;
         // update db
         $model->where(['nik'=>$nik])->set(['is_sanggah'=>2])->update();
-        echo 'update '.$nik;
+        // echo 'update '.$nik;
       }
 
       // echo 'selesai';
@@ -61,6 +61,8 @@ class Api extends BaseController
       $newpage = $page+1;
 
       if($newpage > $body->totalPages){
+        echo 'executing '.$body->totalElements;
+        echo '<br>';
         echo 'Done and waiting to reload...';
         echo "<script type='text/javascript'>
                 setInterval('window.location.reload()', 600000);
