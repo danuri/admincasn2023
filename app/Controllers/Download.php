@@ -151,4 +151,36 @@ class Download extends BaseController
       $writer->save('php://output');
       exit();
     }
+
+    public function sanggah()
+    {
+      $model = new CrudModel();
+      $nonasn = $model->getResult('pelamar',['lokasi_kode'=>session('lokasi'),'is_sanggah !='=>'NULL']);
+
+      $spreadsheet = new Spreadsheet();
+      $sheet = $spreadsheet->getActiveSheet();
+
+      $sheet->setCellValue('A1', 'nik');
+      $sheet->setCellValue('B1', 'nama_ijazah');
+      $sheet->setCellValue('C1', 'jabatan_nama');
+      $sheet->setCellValue('D1', 'jenis_formasi');
+      $sheet->setCellValue('E1', 'jenis');
+
+      $i = 2;
+      foreach ($nonasn as $row) {
+        $sheet->getCell('A'.$i)->setValueExplicit($row->nik,\PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING2);
+        $sheet->setCellValue('B'.$i, $row->nama_ijazah);
+        $sheet->setCellValue('C'.$i, $row->jabatan_nama);
+        $sheet->setCellValue('D'.$i, $row->jenis_formasi);
+        $sheet->setCellValue('E'.$i, $row->jenis);
+
+        $i++;
+      }
+
+      $writer = new Xlsx($spreadsheet);
+      header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      header('Content-Disposition: attachment; filename="Data_Pelamar_Sanggah.xlsx"');
+      $writer->save('php://output');
+      exit();
+    }
 }

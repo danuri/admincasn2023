@@ -31,6 +31,11 @@
                         <td><?= get_option('data_pelamar')?></td>
                         <td><a href="<?= site_url('downloads/pelamar')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
+                      <tr>
+                        <td>Data Pelamar Sanggah</td>
+                        <td>Data ringkas</td>
+                        <td><a href="<?= site_url('downloads/sanggah')?>" class="btn btn-sm btn-primary">Download</a></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>

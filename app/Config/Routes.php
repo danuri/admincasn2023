@@ -24,6 +24,7 @@ $routes->group("api", function ($routes) {
 $routes->group("downloads", ["filter" => "auth"], function ($routes) {
     $routes->get('', 'Download::index');
     $routes->get('pelamar', 'Download::pelamar');
+    $routes->get('sanggah', 'Download::sanggah');
 });
 
 $routes->group("upload", ["filter" => "auth"], function ($routes) {
