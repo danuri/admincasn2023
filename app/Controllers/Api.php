@@ -22,7 +22,7 @@ class Api extends BaseController
 
       $paramx = [
           'byJenisPengadaanId' => '3',
-          'byIsSudahJawabSanggah' => true,
+          'byIsSudahJawabSanggah' => false,
           'paginatedRequest' => [
             'tipeResult' => 'SHUFFLE',
             'size' => 100,
