@@ -16,6 +16,11 @@ $routes->get('regulasi', 'Regulasi::index',['filter' => 'auth']);
 $routes->get('pelamar', 'Pelamar::index',['filter' => 'auth']);
 $routes->get('formasi', 'Formasi::index',['filter' => 'auth']);
 
+$routes->group("api", function ($routes) {
+    $routes->get('sanggah', 'Api::sanggah');
+    $routes->get('sanggah/(:num)', 'Api::sanggah/$1');
+});
+
 $routes->group("downloads", ["filter" => "auth"], function ($routes) {
     $routes->get('', 'Download::index');
     $routes->get('pelamar', 'Download::pelamar');
