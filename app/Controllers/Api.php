@@ -62,8 +62,11 @@ class Api extends BaseController
 
       if($newpage > $body->totalPages){
         echo 'Done and waiting to reload...';
-        sleep(600);
-        return redirect()->to('api/sanggah/'.$jenis.'/'.$type.'/'.$page);
+        echo "<script type='text/javascript'>
+                setInterval('window.location.reload()', 600000);
+            </script>";
+        // sleep(600);
+        // return redirect()->to('api/sanggah/'.$jenis.'/'.$type.'/'.$page);
         // echo 'Done';
         // return false;
       }else{
