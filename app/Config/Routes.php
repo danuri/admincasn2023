@@ -17,7 +17,7 @@ $routes->get('pelamar', 'Pelamar::index',['filter' => 'auth']);
 $routes->get('formasi', 'Formasi::index',['filter' => 'auth']);
 
 $routes->group("api", function ($routes) {
-    $routes->get('sanggah', 'Api::sanggah');
+    $routes->get('sanggah/(:any)', 'Api::sanggah/$1');
     $routes->get('sanggah/(:any)/(:num)', 'Api::sanggah/$1/$2');
 });
 
