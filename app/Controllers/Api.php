@@ -54,13 +54,19 @@ class Api extends BaseController
         echo 'update '.$nik;
       }
 
-      echo 'selesai';
+      // echo 'selesai';
 
       // sleep(5);
 
       if($i == $count){
         $newpage = $page+1;
-        return redirect()->to('api/sanggah/'.$newpage);
+
+        if($newpage > $body->totalPages){
+          echo 'Done';
+          return false;
+        }else{
+          return redirect()->to('api/sanggah/'.$newpage);
+        }
       }
     }
 }
