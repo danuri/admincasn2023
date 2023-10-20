@@ -65,7 +65,7 @@ class Api extends BaseController
           echo 'Done';
           return false;
         }else{
-          return redirect()->to('api/sanggah/'.$newpage);
+          return redirect()->to('api/sanggah/'.$type.'/'.$newpage);
         }
       }
     }
