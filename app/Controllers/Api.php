@@ -12,7 +12,7 @@ class Api extends BaseController
         //
     }
 
-    public function sanggah($page=1)
+    public function sanggah($type,$page=1)
     {
       $client = \Config\Services::curlrequest();
 
@@ -22,7 +22,7 @@ class Api extends BaseController
 
       $paramx = [
           'byJenisPengadaanId' => '3',
-          'byIsSudahJawabSanggah' => false,
+          'byIsSudahJawabSanggah' => $type,
           'paginatedRequest' => [
             'tipeResult' => 'SHUFFLE',
             'size' => 100,
