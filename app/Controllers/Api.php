@@ -63,14 +63,32 @@ class Api extends BaseController
       if($newpage > $body->totalPages){
         echo 'executing '.$body->totalElements;
         echo '<br>';
-        echo 'Browser automatically reload in 5 minutes';
-        echo "<script type='text/javascript'>
-                setInterval('window.location.reload()', 300000);
-            </script>";
-        // sleep(600);
-        // return redirect()->to('api/sanggah/'.$jenis.'/'.$type.'/'.$page);
-        // echo 'Done';
-        // return false;
+        ?>
+        <div>This page will reload in <span id="cnt" style="color:red;">300</span> Seconds</div>
+        <script>
+          var counter = 300;
+
+          // The countdown method.
+          window.setInterval(function () {
+              counter--;
+              if (counter >= 0) {
+                  var span;
+                  span = document.getElementById("cnt");
+                  span.innerHTML = counter;
+              }
+              if (counter === 0) {
+                  clearInterval(counter);
+              }
+
+          }, 1000);
+
+          window.setInterval('refresh()', 300000);
+
+          function refresh() {
+              window.location.reload();
+          }
+      </script>
+        <?php
       }else{
         return redirect()->to('api/sanggah/'.$jenis.'/'.$type.'/'.$newpage);
       }
