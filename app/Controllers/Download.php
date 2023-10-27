@@ -155,7 +155,7 @@ class Download extends BaseController
     public function sanggah()
     {
       $model = new CrudModel();
-      $nonasn = $model->getResult('pelamar',['lokasi_kode'=>session('lokasi'),'pasca_sanggah !='=>'NULL']);
+      $nonasn = $model->getResult('pelamar',['lokasi_kode'=>session('lokasi'),'is_sanggah'=>1]);
 
       $spreadsheet = new Spreadsheet();
       $sheet = $spreadsheet->getActiveSheet();
