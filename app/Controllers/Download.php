@@ -155,7 +155,7 @@ class Download extends BaseController
     public function sanggah()
     {
       $model = new CrudModel();
-      $nonasn = $model->getResult('pelamar',['lokasi_kode'=>session('lokasi'),'is_sanggah !='=>'NULL']);
+      $nonasn = $model->getResult('pelamar',['lokasi_kode'=>session('lokasi'),'pasca_sanggah !='=>'NULL']);
 
       $spreadsheet = new Spreadsheet();
       $sheet = $spreadsheet->getActiveSheet();
@@ -165,6 +165,7 @@ class Download extends BaseController
       $sheet->setCellValue('C1', 'jabatan_nama');
       $sheet->setCellValue('D1', 'jenis_formasi');
       $sheet->setCellValue('E1', 'jenis');
+      $sheet->setCellValue('F1', 'pasca_sanggah');
 
       $i = 2;
       foreach ($nonasn as $row) {
@@ -173,6 +174,7 @@ class Download extends BaseController
         $sheet->setCellValue('C'.$i, $row->jabatan_nama);
         $sheet->setCellValue('D'.$i, $row->jenis_formasi);
         $sheet->setCellValue('E'.$i, $row->jenis);
+        $sheet->setCellValue('F'.$i, $row->pasca_sanggah);
 
         $i++;
       }
