@@ -62,14 +62,14 @@
                         <td><a href="https://jdih.menpan.go.id/dokumen-hukum/KEPMEN/jenis/1768?KEPUTUSAN%20MENTERI" target="_blank">Download</a></td>
                       </tr>
                       <tr>
-                        <td>Juklak CPNS Kemenag 2023 (Draft)</td>
-                        <td>Password: casnkemenag2023</td>
-                        <td><a href="<?= base_url('download/RKSJ JUKLAK CPNS KEMENAG 2023 Draft.pdf')?>" class="btn btn-sm btn-primary">Download</a></td>
+                        <td>Juklak CPNS Kemenag 2023</td>
+                        <td></td>
+                        <td><a href="<?= base_url('download/JUKLAK CPNS FORMASI TAHUN 2023.pdf')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
                       <tr>
-                        <td>Juklak PPPK Kemenag 2023 (Draft)</td>
-                        <td>Password: casnkemenag2023</td>
-                        <td><a href="<?= base_url('download/RKSJ JUKLAK PPPK 2023 Draft.pdf')?>" class="btn btn-sm btn-primary">Download</a></td>
+                        <td>Juklak PPPK Kemenag 2023</td>
+                        <td></td>
+                        <td><a href="<?= base_url('download/JUKLAK PPPK FORMASI TAHUN 2023.pdf')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
                     </tbody>
                   </table>

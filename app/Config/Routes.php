@@ -20,6 +20,10 @@ $routes->group("api", function ($routes) {
     $routes->get('sanggah/(:any)/(:any)/(:num)', 'Api::sanggah/$1/$2/$3');
 });
 
+$routes->group("siasn", function ($routes) {
+    $routes->get('role', 'Siasn::role');
+});
+
 $routes->group("downloads", ["filter" => "auth"], function ($routes) {
     $routes->get('', 'Download::index');
     $routes->get('pelamar', 'Download::pelamar');
