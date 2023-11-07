@@ -203,7 +203,7 @@ class Download extends BaseController
 
       $i = 2;
       foreach ($nonasn as $row) {
-        $sheet->setCellValue('A'.$i, $row->nomor_peserta);
+        $sheet->getCell('A'.$i)->setValueExplicit($row->nomor_peserta,\PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING2);
         $sheet->setCellValue('B'.$i, $row->nama);
         $sheet->setCellValue('C'.$i, $row->lokasi);
         $sheet->setCellValue('D'.$i, $row->hari);
