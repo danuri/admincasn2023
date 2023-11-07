@@ -185,4 +185,38 @@ class Download extends BaseController
       $writer->save('php://output');
       exit();
     }
+
+    public function jadwalskd()
+    {
+      $model = new CrudModel();
+      $nonasn = $model->getResult('temp_jadwal_sk',['kode_lokasi'=>session('lokasi'),'jenis'=>'cpns']);
+
+      $spreadsheet = new Spreadsheet();
+      $sheet = $spreadsheet->getActiveSheet();
+
+      $sheet->setCellValue('A1', 'nomor_peserta');
+      $sheet->setCellValue('B1', 'nama');
+      $sheet->setCellValue('C1', 'lokasi');
+      $sheet->setCellValue('D1', 'hari');
+      $sheet->setCellValue('E1', 'tanggal');
+      $sheet->setCellValue('F1', 'sesi');
+
+      $i = 2;
+      foreach ($nonasn as $row) {
+        $sheet->setCellValue('A'.$i, $row->nomor_peserta);
+        $sheet->setCellValue('B'.$i, $row->nama);
+        $sheet->setCellValue('C'.$i, $row->lokasi);
+        $sheet->setCellValue('D'.$i, $row->hari);
+        $sheet->setCellValue('E'.$i, $row->tanggal);
+        $sheet->setCellValue('F'.$i, $row->sesi);
+
+        $i++;
+      }
+
+      $writer = new Xlsx($spreadsheet);
+      header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      header('Content-Disposition: attachment; filename="Jadwal_SKD_CPNS.xlsx"');
+      $writer->save('php://output');
+      exit();
+    }
 }

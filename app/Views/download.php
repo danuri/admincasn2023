@@ -36,6 +36,16 @@
                         <td>Data ringkas</td>
                         <td><a href="<?= site_url('downloads/sanggah')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
+                      <tr>
+                        <td>Jadwal SKD CPNS</td>
+                        <td></td>
+                        <td><a href="<?= site_url('downloads/jadwalskd')?>" class="btn btn-sm btn-primary">Download</a></td>
+                      </tr>
+                      <tr>
+                        <td>Jadwal SK PPPK</td>
+                        <td>Belum Tersedia</td>
+                        <td></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
