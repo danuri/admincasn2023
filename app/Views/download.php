@@ -43,8 +43,8 @@
                       </tr>
                       <tr>
                         <td>Jadwal SK PPPK</td>
-                        <td>Belum Tersedia</td>
                         <td></td>
+                        <td><a href="<?= site_url('downloads/jadwalsk')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
                     </tbody>
                   </table>
