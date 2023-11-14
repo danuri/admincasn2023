@@ -30,6 +30,7 @@ $routes->group("downloads", ["filter" => "auth"], function ($routes) {
     $routes->get('sanggah', 'Download::sanggah');
     $routes->get('jadwalskd', 'Download::jadwalskd');
     $routes->get('jadwalsk', 'Download::jadwalsk');
+    $routes->get('jadwalsksatker', 'Download::jadwalsksatker');
 });
 
 $routes->group("upload", ["filter" => "auth"], function ($routes) {

@@ -38,13 +38,18 @@
                       </tr>
                       <tr>
                         <td>Jadwal SKD CPNS</td>
-                        <td></td>
+                        <td>Dapat diunduh oleh Admin Kanwil</td>
                         <td><a href="<?= site_url('downloads/jadwalskd')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
                       <tr>
                         <td>Jadwal SK PPPK</td>
-                        <td></td>
+                        <td>Dapat diunduh oleh Admin Kanwil</td>
                         <td><a href="<?= site_url('downloads/jadwalsk')?>" class="btn btn-sm btn-primary">Download</a></td>
+                      </tr>
+                      <tr>
+                        <td>Jadwal SK CPNS & PPPK Internal</td>
+                        <td>Peserta yang mendaftar pada <?= session('lokasi_nama')?></td>
+                        <td><a href="<?= site_url('downloads/jadwalsksatker')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
                     </tbody>
                   </table>

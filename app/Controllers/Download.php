@@ -253,4 +253,40 @@ class Download extends BaseController
       $writer->save('php://output');
       exit();
     }
+
+    public function jadwalsksatker()
+    {
+      $model = new CrudModel();
+      $nonasn = $model->getResult('temp_jadwal_sk',['lokasi_formasi'=>session('lokasi')]);
+
+      $spreadsheet = new Spreadsheet();
+      $sheet = $spreadsheet->getActiveSheet();
+
+      $sheet->setCellValue('A1', 'nomor_peserta');
+      $sheet->setCellValue('B1', 'nama');
+      $sheet->setCellValue('C1', 'lokasi');
+      $sheet->setCellValue('D1', 'hari');
+      $sheet->setCellValue('E1', 'tanggal');
+      $sheet->setCellValue('F1', 'sesi');
+      $sheet->setCellValue('G1', 'jenis');
+
+      $i = 2;
+      foreach ($nonasn as $row) {
+        $sheet->getCell('A'.$i)->setValueExplicit($row->nomor_peserta,\PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING2);
+        $sheet->setCellValue('B'.$i, $row->nama);
+        $sheet->setCellValue('C'.$i, $row->lokasi);
+        $sheet->setCellValue('D'.$i, $row->hari);
+        $sheet->setCellValue('E'.$i, $row->tanggal);
+        $sheet->setCellValue('F'.$i, $row->sesi);
+        $sheet->setCellValue('G'.$i, $row->jenis);
+
+        $i++;
+      }
+
+      $writer = new Xlsx($spreadsheet);
+      header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      header('Content-Disposition: attachment; filename="Jadwal_SK.xlsx"');
+      $writer->save('php://output');
+      exit();
+    }
 }
