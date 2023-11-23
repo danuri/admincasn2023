@@ -53,7 +53,7 @@ class Sktt extends BaseController
       'alamat' => "required",
       'maps' => "required",
     ])) {
-      return $this->response->setJSON(['message'=>'Pastikan Semua sudah terisi']);
+      return redirect()->back()->with('message', 'Pastikan Semua sudah terisi');
     }
 
     $model = new SktModel();
