@@ -18,17 +18,11 @@
               <ul>
                 <li>1 Lokasi dapat dibuat lebih dari 1 titik lokasi</li>
                 <!-- <li>2 Lokasi dapat dibuat 1 titik lokasi dengan mengubah nama tilok dengan dengan nama tilok yang sama.</li> -->
-                <li>1 hari 3 Sesi</li>
-                <li>Pada aplikasi ini penggunaan kode sesi :
-                  <ul>
-                    <li>Rabu : Sesi 1,2,3</li>
-                    <li>Kamis : Sesi 4,5,6</li>
-                  </ul>
-                </li>
+                <li>1 hari 4 Sesi</li>
                 <li>Peserta dapat dipindahkan menggunakan fitur pindah tilok hanya pada lokasi yang sama</li>
                 <li>Tombol Generate Jadwal untuk meng<i>generate</i> seluruh peserta pada tilok yang dipilih</li>
                 <li>Jika ada perpindahan tilok peserta, pada tilok wajib dilakukan generate jadwal kembali</li>
-                <li>Pelaksanaan dapat dilaksanakan minimal 1 sesi. Tidak harus 6 sesi.</li>
+                <li>Pelaksanaan dapat dilaksanakan minimal 1 sesi.</li>
                 <li>Dalam Pengaturan titik lokasi, Kanwil wajib berkoordinasi dengan ESELON 1/PTKN/BALAI/UPT pada wilayahnya.</li>
               </ul>
             </div>
