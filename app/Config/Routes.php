@@ -51,6 +51,14 @@ $routes->group("verifikasi", ["filter" => "auth"], function ($routes) {
     $routes->post('nonasn', 'Verifikasi::searchnonasn');
 });
 
+$routes->group("sktt", ["filter" => "auth"], function ($routes) {
+    $routes->get('lokasi', 'Sktt::lokasi');
+    $routes->post('lokasi', 'Sktt::inserttilok');
+    $routes->get('edit/(:any)', 'Sktt::edit/$1');
+    $routes->post('edittilok', 'Sktt::edittilok');
+    $routes->get('delete/(:any)', 'Sktt::deletetilok/$1');
+});
+
 $routes->group("admin", ["filter" => "admin"], function ($routes) {
 
   $routes->group("users", function ($routes) {

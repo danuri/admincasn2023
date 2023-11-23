@@ -207,6 +207,25 @@
                             </a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link menu-link collapsed" href="#sidebarLanding" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLanding">
+                                <i class="ri-rocket-line"></i> <span data-key="t-landing">SKT Tambahan</span>
+                            </a>
+                            <div class="menu-dropdown collapse" id="sidebarLanding" style="">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="<?= site_url('sktt/lokasi')?>" class="nav-link" data-key="t-one-page">Lokasi Ujian</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a href="nft-landing.html" class="nav-link" data-key="t-nft-landing">Peserta Ujian</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="job-landing.html" class="nav-link" data-key="t-job">Job</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </li>
+
                         <li class="menu-title"><span data-key="t-menu">Validasi Data</span></li>
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="<?= site_url('verifikasi/nonasn')?>">
