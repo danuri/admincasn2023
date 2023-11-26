@@ -14,10 +14,13 @@
         <div class="row">
           <div class="col-xl-12">
             <div class="alert alert-success">
+              PENDING
+            </div>
+            <!-- <div class="alert alert-success">
               Readme!
               <ul>
                 <li>1 Lokasi dapat dibuat lebih dari 1 titik lokasi</li>
-                <!-- <li>2 Lokasi dapat dibuat 1 titik lokasi dengan mengubah nama tilok dengan dengan nama tilok yang sama.</li> -->
+                <li>2 Lokasi dapat dibuat 1 titik lokasi dengan mengubah nama tilok dengan dengan nama tilok yang sama.</li>
                 <li>1 hari 4 Sesi</li>
                 <li>Peserta dapat dipindahkan menggunakan fitur pindah tilok hanya pada lokasi yang sama</li>
                 <li>Tombol Generate Jadwal untuk meng<i>generate</i> seluruh peserta pada tilok yang dipilih</li>
@@ -25,12 +28,12 @@
                 <li>Pelaksanaan dapat dilaksanakan minimal 1 sesi.</li>
                 <li>Dalam Pengaturan titik lokasi, Kanwil wajib berkoordinasi dengan ESELON 1/PTKN/BALAI/UPT pada wilayahnya.</li>
               </ul>
-            </div>
+            </div> -->
 
           </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-12">
 
             <div class="card">
@@ -77,7 +80,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
     </div>
 </div>

@@ -18,6 +18,7 @@ $routes->get('formasi', 'Formasi::index',['filter' => 'auth']);
 
 $routes->group("api", function ($routes) {
     $routes->get('sanggah/(:any)/(:any)/(:num)', 'Api::sanggah/$1/$2/$3');
+    $routes->get('whatsapp', 'Api::whatsapp');
 });
 
 $routes->group("siasn", function ($routes) {

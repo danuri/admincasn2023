@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\PelamarModel;
+use App\Models\CrudModel;
+use App\Libraries\Notifikasi;
 
 class Api extends BaseController
 {
@@ -91,6 +93,35 @@ class Api extends BaseController
         <?php
       }else{
         return redirect()->to('api/sanggah/'.$jenis.'/'.$type.'/'.$newpage);
+      }
+    }
+
+    public function whatsapp()
+    {
+      $model = new CrudModel;
+      $peserta = $model->getResult('notifwa',['status'=>0]);
+
+      foreach ($peserta as $row) {
+        $text = '📑 *Info PPPK Kementerian Agama RI 2023*
+
+Kepada. *'.$row->nama.'*
+
+Kami Informasikan bahwa terdapat penyesuaian Jadwal Seleksi Kompetensi.
+
+Jadwal:
+*Universitas Islam Makassar Auditorium Drs. KH. Muhyddin M. Zain, 28 November 2023 sesi 1*
+
+Kunjungi https://casn.kemenag.go.id/informasi untuk melihat daftar peserta penyesuaian jadwal.
+
+Terima Kasih
+
+*Nomor ini tidak menerima balasan atau telepon*
+
+*Biro Kepegawaian*' ;
+        $hp   = hp($row->phone);
+
+        $notif = new Notifikasi();
+        $notif->sendWhatsapp($hp,$text);
       }
     }
 }
