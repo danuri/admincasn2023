@@ -61,6 +61,19 @@ if ( ! function_exists('update_option'))
 	}
 }
 
+function harisesi($sesi)
+{
+  if($sesi == 1){
+    return 'Selasa';
+  }else if($sesi == 2){
+    return 'Selasa';
+  }else if($sesi == 3){
+    return 'Selasa';
+  }else if($sesi == 4){
+    return 'Selasa';
+  }
+}
+
 function hari($day)
 {
 	// $day = date('N', strtotime($date));

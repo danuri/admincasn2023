@@ -52,12 +52,28 @@ $routes->group("verifikasi", ["filter" => "auth"], function ($routes) {
     $routes->post('nonasn', 'Verifikasi::searchnonasn');
 });
 
+// $routes->group("sktt", ["filter" => "auth"], function ($routes) {
+//     $routes->get('lokasi', 'Sktt::lokasi');
+//     $routes->post('lokasi', 'Sktt::inserttilok');
+//     $routes->get('edit/(:any)', 'Sktt::edit/$1');
+//     $routes->post('edittilok', 'Sktt::edittilok');
+//     $routes->get('delete/(:any)', 'Sktt::deletetilok/$1');
+// });
+
 $routes->group("sktt", ["filter" => "auth"], function ($routes) {
+    // $routes->get('', 'Sktt::lokasi');
+    // $routes->post('', 'Sktt::inserttilok');
     $routes->get('lokasi', 'Sktt::lokasi');
     $routes->post('lokasi', 'Sktt::inserttilok');
-    $routes->get('edit/(:any)', 'Sktt::edit/$1');
-    $routes->post('edittilok', 'Sktt::edittilok');
+    $routes->get('akses', 'Sktt::akses');
+    $routes->post('lokasi', 'Sktt::inserttilok');
+    $routes->post('pindahtilok', 'Sktt::pindahtilok');
+    $routes->get('gettilok/(:any)', 'Sktt::gettilok/$1');
+    $routes->post('generatejadwal', 'Sktt::generatejadwal');
     $routes->get('delete/(:any)', 'Sktt::deletetilok/$1');
+    $routes->get('peserta/(:any)', 'Sktt::peserta/$1');
+    $routes->get('edit/(:num)', 'Sktt::edit/$1');
+    $routes->post('edittilok', 'Sktt::edittilok');
 });
 
 $routes->group("admin", ["filter" => "admin"], function ($routes) {

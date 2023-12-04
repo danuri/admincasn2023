@@ -28,7 +28,7 @@ class Sktt extends BaseController
   public function lokasi()
   {
     $model = new CrudModel;
-    $data['lokasi'] = $model->getResult('sktt_lokasi',['kode_lokasi'=>session('lokasi')]);
+    $data['lokasi'] = $model->getResult('skt_lokasi',['id_provinsi'=>session('lokasi')]);
 
     return view('sktt/lokasi', $data);
   }
@@ -37,9 +37,9 @@ class Sktt extends BaseController
   {
     $id = decrypt($id);
     $model = new CrudModel;
-    $data['lokasi'] = $model->getResult('sktt_lokasi',['kodesatker'=>session('kodesimpeg')]);
+    $data['lokasi'] = $model->getResult('skt_lokasi',['id_provinsi'=>session('lokasi')]);
     $data['tilok'] = $model->getRow('sktt_tilok',['id'=>$id]);
-    $data['peserta'] = $model->getResult('sktt_peserta',['kode_tilok'=>$id]);
+    $data['peserta'] = $model->getResult('sktt_peserta',['tilok_kode'=>$id]);
 
     return view('sktt/lokasi', $data);
   }
@@ -134,7 +134,7 @@ class Sktt extends BaseController
     $sesi = $this->request->getVar('sesi');
 
     for ($i=0; $i < count($peserta); $i++) {
-      $update = $model->where(['no_peserta'=>$peserta[$i],'kode_lokasi'=>$lokasi])->set(['kode_tilok'=>$tilok,'sesi'=>$sesi])->update();
+      $update = $model->where(['nomor_peserta'=>$peserta[$i],'tilok_kabupaten'=>$lokasi])->set(['tilok_kode'=>$tilok,'sesi'=>$sesi])->update();
     }
 
     return redirect()->back();
@@ -149,7 +149,7 @@ class Sktt extends BaseController
     $model = new CrudModel;
     $modelp = new PesertaskttModel;
 
-    $peserta = $model->getResult('sktt_peserta',['kode_tilok'=>$id]);
+    $peserta = $model->getResult('sktt_peserta',['tilok_kode'=>$id]);
     $jumlah = count($peserta);
     $persesi = ceil($jumlah/$sesi);
     // echo $persesi;
@@ -157,7 +157,7 @@ class Sktt extends BaseController
     $ses = 1;
     foreach ($peserta as $row) {
 
-      $update = $modelp->where(['no_peserta'=>$row->no_peserta])->set(['sesi'=>$ses])->update();
+      $update = $modelp->where(['nomor_peserta'=>$row->nomor_peserta])->set(['sesi'=>$ses])->update();
       // echo $nomor.'. '.$row->nama.' : '.$ses.'<br>';
 
       $nomor++;
