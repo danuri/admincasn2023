@@ -289,4 +289,80 @@ class Download extends BaseController
       $writer->save('php://output');
       exit();
     }
+
+    public function skttpesertaprov($id)
+    {
+      $model = new CrudModel();
+      $peserta = $model->pesertaskttprovinsi();
+
+      $spreadsheet = new Spreadsheet();
+      $sheet = $spreadsheet->getActiveSheet();
+
+      $sheet->setCellValue('A1', 'nomor_peserta');
+      $sheet->setCellValue('B1', 'nama');
+      $sheet->setCellValue('C1', 'jabatan');
+      $sheet->setCellValue('D1', 'lokasi_jabatan');
+      $sheet->setCellValue('E1', 'provinsi');
+      $sheet->setCellValue('F1', 'kabupaten');
+      $sheet->setCellValue('G1', 'titik_lokasi');
+      $sheet->setCellValue('H1', 'sesi');
+
+      $i = 2;
+      foreach ($peserta as $row) {
+        $sheet->getCell('A'.$i)->setValueExplicit($row->nomor_peserta,\PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING2);
+        $sheet->setCellValue('B'.$i, $row->nama);
+        $sheet->setCellValue('C'.$i, $row->jabatan_nama);
+        $sheet->setCellValue('D'.$i, $row->lokasi_nama);
+        $sheet->setCellValue('E'.$i, $row->provinsi);
+        $sheet->setCellValue('F'.$i, $row->kabupaten);
+        $sheet->setCellValue('F'.$i, $row->tilok);
+        $sheet->setCellValue('H'.$i, $row->sesi);
+
+        $i++;
+      }
+
+      $writer = new Xlsx($spreadsheet);
+      header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      header('Content-Disposition: attachment; filename="Jadwal_SKTT_provinsi.xlsx"');
+      $writer->save('php://output');
+      exit();
+    }
+
+    public function skttpeserta($id)
+    {
+      $model = new CrudModel();
+      $peserta = $model->pesertaskttsatker();
+
+      $spreadsheet = new Spreadsheet();
+      $sheet = $spreadsheet->getActiveSheet();
+
+      $sheet->setCellValue('A1', 'nomor_peserta');
+      $sheet->setCellValue('B1', 'nama');
+      $sheet->setCellValue('C1', 'jabatan');
+      $sheet->setCellValue('D1', 'lokasi_jabatan');
+      $sheet->setCellValue('E1', 'provinsi');
+      $sheet->setCellValue('F1', 'kabupaten');
+      $sheet->setCellValue('G1', 'titik_lokasi');
+      $sheet->setCellValue('H1', 'sesi');
+
+      $i = 2;
+      foreach ($peserta as $row) {
+        $sheet->getCell('A'.$i)->setValueExplicit($row->nomor_peserta,\PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING2);
+        $sheet->setCellValue('B'.$i, $row->nama);
+        $sheet->setCellValue('C'.$i, $row->jabatan_nama);
+        $sheet->setCellValue('D'.$i, $row->lokasi_nama);
+        $sheet->setCellValue('E'.$i, $row->provinsi);
+        $sheet->setCellValue('F'.$i, $row->kabupaten);
+        $sheet->setCellValue('F'.$i, $row->tilok);
+        $sheet->setCellValue('H'.$i, $row->sesi);
+
+        $i++;
+      }
+
+      $writer = new Xlsx($spreadsheet);
+      header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+      header('Content-Disposition: attachment; filename="Jadwal_SKTT_Satker.xlsx"');
+      $writer->save('php://output');
+      exit();
+    }
 }

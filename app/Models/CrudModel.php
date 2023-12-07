@@ -354,4 +354,52 @@ class CrudModel extends Model
                                   FROM tm_dokumen a WHERE a.status='1'")->getResult();
         return $query;
       }
+
+      public function pesertaskttsatker()
+      {
+        $kode = session('lokasi');
+        $query = $this->db->query("SELECT
+                                  	a.*,
+                                  	b.provinsi AS provinsi,
+                                  	b.lokasi_ujian AS kabupaten,
+                                  	c.tilok AS tilok
+                                  FROM
+                                  	sktt_peserta a
+                                  	INNER JOIN
+                                  	skt_lokasi b
+                                  	ON
+                                  		a.tilok_provinsi = b.id_provinsi AND
+                                  		a.tilok_kabupaten = b.id
+                                  	INNER JOIN
+                                  	sktt_tilok c
+                                  	ON
+                                  		a.tilok_kode = c.id
+                                  WHERE
+                                  	a.lokasi_kode = '$kode'")->getResult();
+        return $query;
+      }
+
+      public function pesertaskttprovinsi()
+      {
+        $kode = session('lokasi');
+        $query = $this->db->query("SELECT
+                                  	a.*,
+                                  	b.provinsi AS provinsi,
+                                  	b.lokasi_ujian AS kabupaten,
+                                  	c.tilok AS tilok
+                                  FROM
+                                  	sktt_peserta a
+                                  	INNER JOIN
+                                  	skt_lokasi b
+                                  	ON
+                                  		a.tilok_provinsi = b.id_provinsi AND
+                                  		a.tilok_kabupaten = b.id
+                                  	INNER JOIN
+                                  	sktt_tilok c
+                                  	ON
+                                  		a.tilok_kode = c.id
+                                  WHERE
+                                  	a.tilok_provinsi = '$kode'")->getResult();
+        return $query;
+      }
 }

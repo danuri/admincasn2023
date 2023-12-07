@@ -32,6 +32,8 @@ $routes->group("downloads", ["filter" => "auth"], function ($routes) {
     $routes->get('jadwalskd', 'Download::jadwalskd');
     $routes->get('jadwalsk', 'Download::jadwalsk');
     $routes->get('jadwalsksatker', 'Download::jadwalsksatker');
+    $routes->get('skttpeserta', 'Download::skttpeserta');
+    $routes->get('skttpesertaprov', 'Download::skttpesertaprov');
 });
 
 $routes->group("upload", ["filter" => "auth"], function ($routes) {
