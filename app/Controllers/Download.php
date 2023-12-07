@@ -290,7 +290,7 @@ class Download extends BaseController
       exit();
     }
 
-    public function skttpesertaprov($id)
+    public function skttpesertaprov()
     {
       $model = new CrudModel();
       $peserta = $model->pesertaskttprovinsi();
@@ -328,7 +328,7 @@ class Download extends BaseController
       exit();
     }
 
-    public function skttpeserta($id)
+    public function skttpeserta()
     {
       $model = new CrudModel();
       $peserta = $model->pesertaskttsatker();
