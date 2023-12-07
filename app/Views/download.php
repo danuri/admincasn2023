@@ -51,6 +51,11 @@
                         <td>Peserta yang mendaftar pada <?= session('lokasi_nama')?></td>
                         <td><a href="<?= site_url('downloads/jadwalsksatker')?>" class="btn btn-sm btn-primary">Download</a></td>
                       </tr>
+                      <tr>
+                        <td>Peserta SKTT</td>
+                        <td>Peserta yang mendaftar pada <?= session('lokasi_nama')?></td>
+                        <td><a href="<?= site_url('downloads/skttpeserta')?>" class="btn btn-sm btn-primary">Download</a></td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
