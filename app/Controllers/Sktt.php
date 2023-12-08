@@ -44,7 +44,7 @@ class Sktt extends BaseController
     return view('sktt/lokasi', $data);
   }
 
-  public function inserttilok()
+  public function inserttilokx()
   {
 	// return $this->response->setJSON(['message'=>'Sudah ditutup!']);
 
@@ -72,7 +72,7 @@ class Sktt extends BaseController
     return redirect()->back();
   }
 
-  public function edittilok()
+  public function edittilokx()
   {
     if (! $this->validate([
       'lokasi' => "required",
@@ -97,7 +97,7 @@ class Sktt extends BaseController
     return redirect()->back();
   }
 
-  public function edit($id)
+  public function editx($id)
   {
     $model = new SktModel();
     $detail = $model->find($id);
@@ -105,7 +105,7 @@ class Sktt extends BaseController
     return $this->response->setJSON($detail);
   }
 
-  public function deletetilok($id)
+  public function deletetilokx($id)
   {
     $model = new SktModel;
     $id = decrypt($id);
@@ -125,7 +125,7 @@ class Sktt extends BaseController
     }
   }
 
-  public function pindahtilok()
+  public function pindahtilokx()
   {
     $model = new PesertaskttModel();
     $peserta = $this->request->getVar('peserta');
@@ -140,7 +140,7 @@ class Sktt extends BaseController
     return redirect()->back();
   }
 
-  public function generatejadwal()
+  public function generatejadwalx()
   {
     $lokasi = $this->request->getVar('lokasi');
     $sesi = $this->request->getVar('sesi');
