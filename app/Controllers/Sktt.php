@@ -20,7 +20,7 @@ class Sktt extends BaseController
   public function akses()
   {
     $model = new CrudModel;
-    $data['lokasi'] = $model->getResult('sktt_lokasi',['kode_lokasi'=>session('lokasi')]);
+    $data['lokasi'] = $model->getResult('skt_lokasi',['id_provinsi'=>session('lokasi')]);
 
     return view('sktt/akses', $data);
   }

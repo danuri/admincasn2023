@@ -210,6 +210,9 @@
                                     <li class="nav-item">
                                         <a href="<?= site_url('sktt/lokasi')?>" class="nav-link" data-key="t-one-page">Lokasi Ujian</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="<?= site_url('sktt/akses')?>" class="nav-link" data-key="t-one-page">Akses Absen SKTT</a>
+                                    </li>
                                   <?php } ?>
                                     <!-- <li class="nav-item">
                                         <a href="nft-landing.html" class="nav-link" data-key="t-nft-landing">Peserta Ujian</a>
