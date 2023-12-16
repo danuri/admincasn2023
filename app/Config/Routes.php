@@ -97,6 +97,10 @@ $routes->group("admin", ["filter" => "admin"], function ($routes) {
       $routes->get('', 'Admin\Download::index');
   });
 
+  $routes->group("penempatan", function ($routes) {
+      $routes->get('', 'Admin\Penempatan::index');
+  });
+
   $routes->get('pelamar/(:any)', 'Admin\Pelamar::index/$1');
 
 });

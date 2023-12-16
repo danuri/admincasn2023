@@ -288,6 +288,12 @@
                                 </ul>
                             </div>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="<?= site_url('admin/penempatan')?>">
+                                <i class="ri-folder-upload-line"></i> <span data-key="t-widgets">Penempatan</span>
+                            </a>
+                        </li>
                         <?php }?>
                     </ul>
                 </div>
