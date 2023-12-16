@@ -21,7 +21,14 @@
 
         <div class="row">
           <div class="col-xl-12">
-
+            <div class="alert alert-warning" role="alert">
+              <strong>Harap diperhatikan!</strong>
+              <ul>
+                <li>Fitur ini untuk menyesuaikan penamaan unor pada SIASN</li>
+                <li>Lokasi penempatan pada penetapan Menpan harus sesuai dengan Unor SIASN</li>
+                <li>Penempatan SIASN dapat berubah jika terjadi perubahan nomenklatur</li>
+              </ul>
+            </div>
             <div class="card">
               <div class="card-body">
                 <div class="table-responsive">
