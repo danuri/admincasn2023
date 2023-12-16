@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- Layout config Js -->
     <script src="<?= base_url()?>assets/js/layout.js?v=2"></script>
     <!-- Bootstrap Css -->
@@ -27,7 +27,7 @@
     <!-- custom Css-->
     <link href="<?= base_url()?>assets/css/custom.min.css?v=2" rel="stylesheet" type="text/css" />
 
-
+    <?= $this->renderSection('style') ?>
 
 </head>
 
@@ -240,6 +240,11 @@
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="<?= site_url('pengaturan/formasi')?>">
                                 <i class="ri-todo-line"></i> <span data-key="t-widgets">Formasi</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="<?= site_url('pengaturan/penempatan')?>">
+                                <i class="ri-todo-line"></i> <span data-key="t-widgets">Penempatan SIASN</span>
                             </a>
                         </li>
 

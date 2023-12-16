@@ -45,6 +45,9 @@ $routes->group("pengaturan", ["filter" => "auth"], function ($routes) {
     $routes->get('formasi', 'Pengaturan\Formasi::index');
     $routes->post('formasi/saveporsi', 'Pengaturan\Formasi::saveporsi');
     $routes->post('formasi/final', 'Pengaturan\Formasi::final');
+    $routes->get('penempatan', 'Pengaturan\Penempatan::index');
+    $routes->get('penempatan/search', 'Pengaturan\Penempatan::search');
+    $routes->post('penempatan/save', 'Pengaturan\Penempatan::save');
 });
 
 $routes->group("verifikasi", ["filter" => "auth"], function ($routes) {
