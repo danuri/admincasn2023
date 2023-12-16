@@ -29,6 +29,7 @@
                     <thead>
                       <tr>
                         <th>Jabatan</th>
+                        <th>Alokasi</th>
                         <th>Penempatan Menpan</th>
                         <th>Penempatan SIASN</th>
                         <th>Ubah</th>
@@ -38,6 +39,7 @@
                       <?php foreach ($penempatan as $row) {?>
                       <tr>
                         <td><?= $row->jabatan?></td>
+                        <td><?= $row->jumlah?></td>
                         <td><?= $row->penempatan?></td>
                         <td><?= $row->unor_nama?></td>
                         <td><a href="javascript:;" onclick="edit('<?= $row->id?>')" class="btn btn-sm btn-primary">Ubah</a></td>
