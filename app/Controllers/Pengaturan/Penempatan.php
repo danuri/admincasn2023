@@ -33,9 +33,10 @@ class Penempatan extends BaseController
       $unorid = $this->request->getVar('unor');
 
       $namaunor = $munor->find($unorid);
+      $formasi = $model->find($id);
 
       $param = ['unor_nama' => $namaunor->nama,'unor_id'=>$unorid];
-      $model->update($id,$param);
+      $model->set($param)->where(['penempatan'=>$formasi->penempatan,'kode_lokasi'=>$formasi->kode_lokasi])->update();
 
       return redirect()->back()->with('message','Unor telah diupdate');
     }
