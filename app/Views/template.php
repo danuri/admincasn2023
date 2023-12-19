@@ -200,6 +200,21 @@
                             </a>
                         </li>
 
+                        <?php if(session('is_skb') == 1){ ?>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link collapsed" href="#sidebarLanding" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLanding">
+                                <i class="ri-rocket-line"></i> <span data-key="t-landing">SKB CPNS</span>
+                            </a>
+                            <div class="menu-dropdown collapse" id="sidebarLanding" style="">
+                                <ul class="nav nav-sm flex-column">
+                                  <li class="nav-item">
+                                    <a href="<?= site_url('skb/aksespenguji')?>" class="nav-link" data-key="t-one-page">Akses Penguji</a>
+                                  </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <?php } ?>
+
                         <li class="nav-item">
                             <a class="nav-link menu-link collapsed" href="#sidebarLanding" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLanding">
                                 <i class="ri-rocket-line"></i> <span data-key="t-landing">SKT Tambahan</span>

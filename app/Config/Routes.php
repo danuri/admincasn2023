@@ -81,6 +81,10 @@ $routes->group("sktt", ["filter" => "auth"], function ($routes) {
     $routes->post('edittilok', 'Sktt::edittilok');
 });
 
+$routes->group("skb", ["filter" => "auth"], function ($routes) {
+    $routes->get('aksespenguji', 'Skb::aksespenguji');
+});
+
 $routes->group("admin", ["filter" => "admin"], function ($routes) {
 
   $routes->group("users", function ($routes) {
