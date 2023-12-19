@@ -22,7 +22,7 @@ class Skb extends BaseController
     $model = new CrudModel;
     $data['akses'] = $model->getResult('skb_penguji',['kode_lokasi'=>session('lokasi')]);
 
-    return view('skb/aksespenguji', $data);
+    return view('skb/akses', $data);
   }
 
 }
