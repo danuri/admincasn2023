@@ -37,9 +37,9 @@
                     <tr>
                       <td><?= $row->nip?></td>
                       <td><?= $row->nama?></td>
-                      <td><?= $row->ujian?></td>
-                      <td><?= $row->username?></td>
-                      <td><?= $row->password?></td>
+                      <td><?= ($row->ujian == 'praker')?'Praktek Kerja':'Wawancara';?></td>
+                      <td><?= ($row->ujian == 'praker')?'praker_':'interview_';?><?= $row->username?></td>
+                      <td>kemenag2023</td>
                     </tr>
                   <?php } ?>
                 </tbody>
