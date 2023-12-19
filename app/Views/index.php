@@ -23,7 +23,7 @@
 
         <div class="row">
           <div class="col-xl-6">
-            <div class="card">
+            <!-- <div class="card">
               <div class="card-body">
                 <h4>Informasi Verifikasi</h4>
                 <ul>
@@ -35,7 +35,18 @@
                 </ul>
                 <p>Note:<br>Bagi yang tidak bisa login, silahkan menghubungi Aa Wasis</p>
               </div>
+            </div> -->
+            <?php if(session('is_skb') == 1){ ?>
+            <div class="card">
+              <div class="card-body">
+                <h4>Informasi Pelaksanaan SKB</h4>
+                <ul>
+                  <li>Login ke <a href="https://skbcpns.bkn.go.id" target="_blank">https://skbcpns.bkn.go.id</a></li>
+                  <li>Username: tilok_<?= session('lokasi')?>, Password: <?= session('lokasi')?></li>
+                </ul>
+              </div>
             </div>
+            <?php } ?>
           </div>
         </div>
 
