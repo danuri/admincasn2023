@@ -41,7 +41,7 @@
               <div class="card-body">
                 <h4>Informasi Pelaksanaan SKB</h4>
                 <ul>
-                  <li>Login ke <a href="https://skbcpns.bkn.go.id" target="_blank">https://skbcpns.bkn.go.id</a></li>
+                  <li>Login ke <a href="https://skbcpns.kemenag.go.id" target="_blank">https://skbcpns.kemenag.go.id</a></li>
                   <li>Username: tilok_<?= session('lokasi')?>, Password: <?= session('lokasi')?></li>
                 </ul>
               </div>
