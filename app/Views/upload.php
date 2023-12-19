@@ -38,7 +38,7 @@
               	          <td><?= $row->keterangan?></td>
               	          <td>
                             <?php if($row->lampiran){?>
-                            <a href="https://ropeg.kemenag.go.id:9000/sscasn/2023/surat/<?= $row->lampiran ?>" class="btn btn-primary btn-sm" target="_blank">Lihat</a>
+                            <a href="https://docu.kemenag.go.id:9000/sscasn/2023/surat/<?= $row->lampiran ?>" class="btn btn-primary btn-sm" target="_blank">Lihat</a>
                           <?php  }else{  ?>
                             Belum mengunggah
                           <?php  }  ?>
