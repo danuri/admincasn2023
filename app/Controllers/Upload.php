@@ -47,7 +47,7 @@ class Upload extends BaseController
 
     $s3 = new S3Client([
       'region'  => 'us-east-1',
-      'endpoint' => 'https://docu.kemenag.go.id:9000/',
+      'endpoint' => 'https://ropeg.kemenag.go.id:9000/',
       'use_path_style_endpoint' => true,
       'version' => 'latest',
       'credentials' => [
