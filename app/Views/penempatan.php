@@ -35,6 +35,7 @@
                   <table class="table align-middle table-striped-columns mb-0 datatable">
                     <thead>
                       <tr>
+                        <th>ID</th>
                         <th>Jabatan</th>
                         <th>Alokasi</th>
                         <th>Penempatan Menpan</th>
@@ -45,6 +46,7 @@
                     <tbody>
                       <?php foreach ($penempatan as $row) {?>
                       <tr>
+                        <td><?= $row->id?></td>
                         <td><?= $row->jabatan?></td>
                         <td><?= $row->jumlah?></td>
                         <td><?= $row->penempatan?></td>

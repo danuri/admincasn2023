@@ -107,6 +107,14 @@ $routes->group("admin", ["filter" => "admin"], function ($routes) {
       $routes->get('', 'Admin\Penempatan::index');
   });
 
+  $routes->group("faq", function ($routes) {
+      $routes->get('', 'Admin\Faq::index');
+      $routes->get('add', 'Admin\Faq::add');
+      $routes->post('add', 'Admin\Faq::save');
+      $routes->get('edit/(:num)', 'Admin\Faq::edit/$1');
+      $routes->post('edit/(:num)', 'Admin\Faq::saveedit/$1');
+  });
+
   $routes->get('pelamar/(:any)', 'Admin\Pelamar::index/$1');
 
 });
