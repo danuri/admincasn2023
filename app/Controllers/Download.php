@@ -80,6 +80,7 @@ class Download extends BaseController
       $sheet->setCellValue('BD1', 'bahasa_ujian_diplomat');
       $sheet->setCellValue('BE1', 'no_thk2');
       $sheet->setCellValue('BF1', 'jenis');
+      $sheet->setCellValue('BG1', 'final');
 
       $i = 2;
       foreach ($nonasn as $row) {
@@ -141,6 +142,7 @@ class Download extends BaseController
         $sheet->setCellValue('BD'.$i, $row->bahasa_ujian_diplomat);
         $sheet->setCellValue('BE'.$i, $row->no_thk2);
         $sheet->setCellValue('BF'.$i, $row->jenis);
+        $sheet->setCellValue('BG'.$i, $row->final_lulus);
 
         $i++;
       }
